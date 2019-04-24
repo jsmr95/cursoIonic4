@@ -1,14 +1,39 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Ionic Blank
+      {{ title }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content padding>
+  <ion-card padding *ngFor="let fruit of fruits, let i = index">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <img src="assets/public/{{fruit.image}}" alt="">
+        </ion-col>
+        <ion-col>
+          <h1>{{ fruit.name }}</h1>
+          <p>{{fruit.description}}</p>
+          <a *ngIf="fruit.link "target="_blank" [href]="fruit.link">More info</a>
+        </ion-col>
+        <ion-col size="2">
+          <ion-button color="danger" (click)='deleteFruit(i)'>
+            <ion-icon slot="icon-only" name="trash" ></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
 </ion-content>
+
+<!-- Footer -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-button color="primary" [disabled]='todas' (click)='restaurar()'>
+      Restore
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
