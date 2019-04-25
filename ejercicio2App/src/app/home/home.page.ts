@@ -22,4 +22,16 @@ export class HomePage {
     this.media =((this.likes * 10) - (this.dislikes * 0)) / (this.likes + this.dislikes);
   }
 
+  aumentaLike(){
+    this.likes++;
+  }
+
+  aumentaDislike(){
+    this.dislikes++;
+  }
+
+  toggleExpandable(){
+    this.mostrarInfo = !this.mostrarInfo;
+  }
+
 }

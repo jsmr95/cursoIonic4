@@ -13,13 +13,13 @@
       <h2>Rating</h2>
       <ion-row>
         <ion-col size="1" text-center style="margin-right:10px">
-          <ion-button color="success" (click)="likes = likes + 1; actualizaMedia()">
+          <ion-button color="success" (click)="aumentaLike(); actualizaMedia()">
             <ion-icon name="thumbs-up"></ion-icon>
             {{ likes }}
           </ion-button>
         </ion-col>
         <ion-col size="1" text-center>
-          <ion-button color="danger" (click)="dislikes = dislikes + 1; actualizaMedia()">
+          <ion-button color="danger" (click)="aumentaDislike(); actualizaMedia()">
             <ion-icon name="thumbs-down"></ion-icon>
             {{ dislikes }}
           </ion-button>
@@ -42,7 +42,7 @@
           <ion-card>
             <ion-card-header>
               <ion-card-title>
-                <ion-button color="primary" (click)="mostrarInfo = !mostrarInfo">
+                <ion-button color="primary" (click)="toggleExpandable()">
                   <ion-icon name="add" *ngIf="!mostrarInfo"></ion-icon>
                   <ion-icon name="remove" *ngIf="mostrarInfo"></ion-icon>
                 </ion-button>
