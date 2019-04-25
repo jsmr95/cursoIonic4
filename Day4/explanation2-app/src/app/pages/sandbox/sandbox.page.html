@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>sandbox</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- CONTENEDOR EXPANDABLE -->
+  <div class="ion-padding">
+    <h2>Expandables contents</h2>
+    <app-expandable-content title="Title1"
+      (change)="expandableContentChanged($event)"
+      numberExpanded="numberExpanded"> Content 1 </app-expandable-content>
+    <app-expandable-content title="Title2"
+    numberExpanded="numberExpanded"> Content 2</app-expandable-content>
+    <app-expandable-content title="Title3"
+    numberExpanded="numberExpanded"> Content 3 </app-expandable-content>
+    <app-expandable-content title="Title4"
+    numberExpanded="numberExpanded"> Content 4 </app-expandable-content>
+  </div>
+  <h4>Number of expanded: {{numberExpanded}}</h4>
+</ion-content>

@@ -15,7 +15,8 @@ const routes: Routes = [
     path: 'list',
     loadChildren: './pages/list/list.module#ListPageModule'
   },
-  { path: 'details/:index', loadChildren: './pages/details/details.module#DetailsPageModule' }
+  { path: 'details/:index', loadChildren: './pages/details/details.module#DetailsPageModule' },
+  { path: 'sandbox', loadChildren: './pages/sandbox/sandbox.module#SandboxPageModule' }
 ];
 
 @NgModule({
