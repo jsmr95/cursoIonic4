@@ -10,7 +10,7 @@ export class HomePage {
   public media:number;
   public likes:number;
   public dislikes:number;
-  public mostrarInfo = false;
+  public mostrarInfo = true;
 
   constructor(){
     this.media = 0;
