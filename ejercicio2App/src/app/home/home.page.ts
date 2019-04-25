@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  public media:number;
+  public likes:number;
+  public dislikes:number;
+  public mostrarInfo = false;
+
+  constructor(){
+    this.media = 0;
+    this.likes = 0;
+    this.dislikes = 0;
+  }
+
+  actualizaMedia(){
+    this.media =((this.likes * 10) - (this.dislikes * 0)) / (this.likes + this.dislikes);
+  }
+
 }

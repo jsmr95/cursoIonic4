@@ -6,8 +6,100 @@
   </ion-toolbar>
 </ion-header>
 
+<!-- RATING -->
 <ion-content>
   <div class="ion-padding">
-    
+    <ion-grid>
+      <h2>Rating</h2>
+      <ion-row>
+        <ion-col size="1" text-center style="margin-right:10px">
+          <ion-button color="success" (click)="likes = likes + 1; actualizaMedia()">
+            <ion-icon name="thumbs-up"></ion-icon>
+            {{ likes }}
+          </ion-button>
+        </ion-col>
+        <ion-col size="1" text-center>
+          <ion-button color="danger" (click)="dislikes = dislikes + 1; actualizaMedia()">
+            <ion-icon name="thumbs-down"></ion-icon>
+            {{ dislikes }}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4">
+          {{ media | number:'1.1-1' }} / 10
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- CONTENEDOR EXPANDABLE -->
+  <div class="ion-padding">
+    <h2>Expandable</h2>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>
+                <ion-button color="primary" (click)="mostrarInfo = !mostrarInfo">
+                  <ion-icon name="add" *ngIf="!mostrarInfo"></ion-icon>
+                  <ion-icon name="remove" *ngIf="mostrarInfo"></ion-icon>
+                </ion-button>
+                <ion-label>Title</ion-label>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content *ngIf="mostrarInfo">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- FORMULARIO -->
+  <div class="ion-padding">
+    <h2>User Form</h2>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input placeholder="Name"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-datetime placeholder="Fecha de nacimiento" display-format="MMM DD, YYYY"></ion-datetime>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-select placeholder="Sexo">
+              <ion-select-option >Femenino</ion-select-option>
+              <ion-select-option >Masculino</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input type="number" placeholder="Teléfono"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input type="email" placeholder="Email"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>
