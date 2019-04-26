@@ -10,7 +10,7 @@ export class ExpandableContentComponent implements OnInit {
   @Input() public title:string;
   @Input() public numberExpanded:number;
 
-  @Output() public expandableContentChanged = new EventEmitter<void>();
+  @Output() public expandableContentChanged = new EventEmitter<boolean>();
 
   public mostrarInfo = true;
 
@@ -23,12 +23,7 @@ export class ExpandableContentComponent implements OnInit {
   }
 
   public emiteExpandableContentChanged(event: any): void {
-    // if (event.mostrarInfo){
-    //   this.numberExpanded++;
-    // }else{
-    //   this.numberExpanded--;
-    // }
-    console.log(event.target);
+    this.expandableContentChanged.emit(event);
   }
 
 }

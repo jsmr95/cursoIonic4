@@ -14,4 +14,12 @@ export class SandboxPage implements OnInit {
   ngOnInit() {
   }
 
+  public change(event){
+    if (event){
+      this.numberExpanded--;
+    }else{
+      this.numberExpanded++;
+    }
+  }
+
 }
