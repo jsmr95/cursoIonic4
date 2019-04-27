@@ -18,4 +18,12 @@
     (expandableContentChanged)="change($event)"> Content 4 </app-expandable-content>
   </div>
   <h4>Number of expanded: {{numberExpanded}}</h4>
+  <br><br><br>
+  <h2>Ratings</h2>
+  <app-rating (addLike)="aumentaLike()" (addDislike)="aumentaDislike()"></app-rating>
+  <app-rating likes="1" (addLike)="aumentaLike()" (addDislike)="aumentaDislike()"></app-rating>
+  <app-rating dislikes="2" (addLike)="aumentaLike()" (addDislike)="aumentaDislike()"></app-rating>
+  <app-rating likes="3" dislikes="1" (addLike)="aumentaLike()" (addDislike)="aumentaDislike()"></app-rating>
+  <h4>Total likes: {{totalLikes}}</h4>
+  <h4>Total dislikes: {{totalDislikes}}</h4>
 </ion-content>

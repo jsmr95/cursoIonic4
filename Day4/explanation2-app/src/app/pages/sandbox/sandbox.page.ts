@@ -8,7 +8,8 @@ import { Component, OnInit, Output } from '@angular/core';
 export class SandboxPage implements OnInit {
 
   @Output() public numberExpanded = 0;
-
+  @Output() public totalLikes = 0;
+  @Output() public totalDislikes = 0;
   constructor() { }
 
   ngOnInit() {
@@ -20,6 +21,14 @@ export class SandboxPage implements OnInit {
     }else{
       this.numberExpanded++;
     }
+  }
+
+  public aumentaLike(){
+    this.totalLikes++;
+  }
+
+  public aumentaDislike(){
+    this.totalDislikes++;
   }
 
 }

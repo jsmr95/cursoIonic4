@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { SandboxPage } from './sandbox.page';
 import { ExpandableContentComponent } from '../../components/expandable-content/expandable-content.component';
+import { RatingComponent } from '../../components/rating/rating.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,7 @@ const routes: Routes = [
   ],
   declarations: [SandboxPage,
     ExpandableContentComponent,
+    RatingComponent,
   ]
 })
 export class SandboxPageModule {}
