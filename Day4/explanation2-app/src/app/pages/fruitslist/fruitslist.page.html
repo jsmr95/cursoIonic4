@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Fruits List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+  <app-expandable-content *ngFor="let fruit of fruits;let i = index"
+  [title]="fruit.name" >
+   <app-fruit-card [fruit]="fruit" [i]="i"></app-fruit-card>
+</app-expandable-content>
+  </div>
+</ion-content>

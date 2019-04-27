@@ -24,6 +24,11 @@ export class AppComponent {
       title: 'SandBox',
       url: '/sandbox',
       icon: 'add'
+    },
+    {
+      title: 'Fruits List',
+      url: '/fruitslist',
+      icon: 'remove'
     }
   ];
 

@@ -19,26 +19,7 @@ export class RatingComponent implements OnInit {
 
   ngOnInit() {
     //Compruebo si me llega algun parametro predefinido
-    if (this.likes){
-      this.dislikes = 0;
-      this.actualizaMedia();
-    } else if (this.dislikes){
-      this.likes = 0;
-      this.actualizaMedia();
-    } else if (this.likes && this.dislikes){
-      this.actualizaMedia();
-    } else {
-      this.likes = 0;
-      this.dislikes = 0;
-      this.media = 0;
-    }
-    //Actualizo los likes y dislikes totales al cargar la pag
-    for(let i = 0; i < +this.likes; i++){
-      this.emiteAddLike();
-    }
-    for(let i = 0; i < +this.likes; i++){
-      this.emiteAddDislike();
-    }
+    this.checkInputs();
   }
 
   //Aumentar likes y dislikes UNITARIOS
@@ -61,6 +42,30 @@ export class RatingComponent implements OnInit {
 
   public emiteAddDislike():void {
     this.addDislike.emit();
+  }
+
+  //Checkeo si me llegan entradas por el selector
+  checkInputs():void{
+    if (this.likes){
+      this.dislikes = 0;
+      this.actualizaMedia();
+    } else if (this.dislikes){
+      this.likes = 0;
+      this.actualizaMedia();
+    } else if (this.likes && this.dislikes){
+      this.actualizaMedia();
+    } else {
+      this.likes = 0;
+      this.dislikes = 0;
+      this.media = 0;
+    }
+    //Actualizo los likes y dislikes totales al cargar la pag
+    for(let i = 0; i < +this.likes; i++){
+      this.emiteAddLike();
+    }
+    for(let i = 0; i < +this.likes; i++){
+      this.emiteAddDislike();
+    }
   }
 
 }
