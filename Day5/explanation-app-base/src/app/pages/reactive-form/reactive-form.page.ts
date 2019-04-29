@@ -14,6 +14,7 @@ import { ToastController } from '@ionic/angular';
 export class ReactiveFormPage implements OnInit {
 
   public form: FormGroup;
+  public submitting = false;
 
   public state = {
     loading: true,
@@ -75,6 +76,7 @@ export class ReactiveFormPage implements OnInit {
     this.usersService.putRemoteUser(this.form.value)
       .subscribe((user: User) => {
         this.presentToast('Se ha modificado!');
+        this.submitting = false;
       }), (error: HttpErrorResponse) => {
         this.presentToast('Error!');
       }
@@ -82,6 +84,7 @@ export class ReactiveFormPage implements OnInit {
 
   public submitForm(): void{
     this.user = this.form.value;
+    this.submitting = true;
     this.peticionPut();
   }
 

@@ -13,9 +13,9 @@
 
   <app-loading-feedback [state]="state" (retryPressed)="retry()">
 
-  <h1>Form</h1>
 
   <form [formGroup]="form" (submit)="submitForm()" [hidden]="!state.loaded">
+    <h1>Form</h1>
     <ion-item>
       <ion-label>Name</ion-label>
       <ion-input formControlName="name"></ion-input>
@@ -40,7 +40,7 @@
       <ion-input type="email" formControlName="email"></ion-input>
     </ion-item>
     <div margin text-right>
-      <ion-button type="submit">Submit</ion-button>
+      <ion-button type="submit" [disabled]="submitting">Submit</ion-button>
     </div>
   </form>
 </app-loading-feedback>
