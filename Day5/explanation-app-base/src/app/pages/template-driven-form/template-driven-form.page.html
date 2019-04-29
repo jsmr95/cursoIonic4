@@ -8,5 +8,11 @@
 </ion-header>
 
 <ion-content padding>
-
+  <form>
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input name="name" [(ngModel)]="nameValue"></ion-input>
+    </ion-item>
+  </form>
+  <h1 [hidden]="!nameValue" >Hello {{ nameValue }}</h1>
 </ion-content>

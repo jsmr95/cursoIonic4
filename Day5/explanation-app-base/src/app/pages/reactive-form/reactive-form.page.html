@@ -9,58 +9,62 @@
 
 <ion-content padding>
 
+  <ion-button (click)="fillForm()"> Fill form </ion-button>
+
+  <app-loading-feedback [state]="state" (retryPressed)="retry()">
+
   <h1>Form</h1>
 
-  <form>
+  <form [formGroup]="form" (submit)="submitForm()" [hidden]="!state.loaded">
     <ion-item>
       <ion-label>Name</ion-label>
-      <ion-input></ion-input>
+      <ion-input formControlName="name"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Birthdate</ion-label>
-      <ion-datetime></ion-datetime>
+      <ion-datetime formControlName="birthDate"></ion-datetime>
     </ion-item>
     <ion-item>
       <ion-label>Sex</ion-label>
-      <ion-select>
+      <ion-select formControlName="sex">
         <ion-select-option value="male">Male</ion-select-option>
         <ion-select-option value="female">Female</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label>Phone</ion-label>
-      <ion-input type="number"></ion-input>
+      <ion-input type="number" formControlName="phone"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Email</ion-label>
-      <ion-input type="email"></ion-input>
+      <ion-input type="email" formControlName="email"></ion-input>
     </ion-item>
     <div margin text-right>
-      <ion-button>Submit</ion-button>
+      <ion-button type="submit">Submit</ion-button>
     </div>
   </form>
-
+</app-loading-feedback>
   <h1>Summary</h1>
 
   <ion-item>
     <ion-label>Name</ion-label>
-    <ion-label></ion-label>
+    <ion-label>{{user.name}}</ion-label>
   </ion-item>
   <ion-item>
     <ion-label>Birthdate</ion-label>
-    <ion-label></ion-label>
+    <ion-label>{{user.birthDate}}</ion-label>
   </ion-item>
   <ion-item>
     <ion-label>Sex</ion-label>
-    <ion-label></ion-label>
+    <ion-label>{{user.sex}}</ion-label>
   </ion-item>
   <ion-item>
     <ion-label>Phone</ion-label>
-    <ion-label></ion-label>
+    <ion-label>{{user.phone}}</ion-label>
   </ion-item>
   <ion-item>
     <ion-label>Email</ion-label>
-    <ion-label></ion-label>
+    <ion-label>{{user.email}}</ion-label>
   </ion-item>
 
 </ion-content>

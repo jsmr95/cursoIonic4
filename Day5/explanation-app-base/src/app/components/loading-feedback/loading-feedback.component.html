@@ -1,0 +1,12 @@
+<!-- Efecto de carga --->
+<div margin text-center [hidden]="!state.loading">
+  <ion-spinner></ion-spinner>
+</div>
+
+<div margin text-center [hidden]="!state.error">
+  <p>Error loading</p>
+  <ion-button (click)="retry()">Retry</ion-button>
+</div>
+
+<!-- [hidden]="!state.loaded" -->
+<ng-content ></ng-content>
