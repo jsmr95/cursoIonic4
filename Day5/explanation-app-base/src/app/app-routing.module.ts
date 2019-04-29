@@ -18,7 +18,10 @@ const routes: Routes = [
   {
     path: 'reactive-form',
     loadChildren: './pages/reactive-form/reactive-form.module#ReactiveFormPageModule'
-  }
+  },
+  { path: 'fruitslist', loadChildren: './pages/fruitslist/fruitslist.module#FruitslistPageModule' },
+  { path: 'fruitslist/:index', loadChildren: './pages/detail/detail.module#DetailPageModule' }
+  
 ];
 
 @NgModule({

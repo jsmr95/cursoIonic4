@@ -25,6 +25,11 @@ export class AppComponent {
       title: 'Reactive form',
       url: '/reactive-form',
       icon: 'clipboard'
+    },
+    {
+      title: 'Fruits List',
+      url: '/fruitslist',
+      icon: 'remove'
     }
   ];
 

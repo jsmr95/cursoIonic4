@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-button>
+    <ion-title> {{fruit.name}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3">
+        <img src="assets/public/{{fruit.image}}" alt="">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>{{fruit.description}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

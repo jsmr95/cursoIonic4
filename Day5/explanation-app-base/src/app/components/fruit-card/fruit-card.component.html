@@ -1,0 +1,19 @@
+
+<ion-grid>
+  <ion-row>
+    <ion-col size="3">
+      <img src="assets/public/{{fruit.image}}" alt="">
+    </ion-col>
+    <ion-col>
+      <h1>{{ fruit.name }}</h1>
+      <p>{{fruit.description}}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col offset="8" size="2">
+      <ion-button color="primary" href="./fruitslist/{{i}}"><!-- la url la he puesto fruitslist/id pero usa la page detail-->
+        VIEW DETAILS
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
