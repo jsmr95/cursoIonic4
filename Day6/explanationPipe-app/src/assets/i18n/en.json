@@ -1,0 +1,7 @@
+{
+  "home": {
+    "title": "Pipes examples!"
+  },
+  "hello": "Hello",
+  "helloName": "Hello {{name}}"
+}

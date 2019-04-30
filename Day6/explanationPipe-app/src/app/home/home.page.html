@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      {{ 'home.title' | translate}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Pipes predefinidos</h1>
+  <p>
+  {{ 'Hello' | uppercase}}
+</p>
+<p>
+{{ 'Hello' | lowercase}}
+</p>
+<p>
+{{ 'Hello' | lowercase | uppercase}}
+</p>
+<p>
+{{ '2019-04-30 00:43:03' | date:'dd/MM/yyyy' }}
+</p>
+<p>
+  {{ 12.2342325 | number:'1.2-2'}}
+</p>
+<p>
+  {{ 12.2342325 | number:'3.4-5'}}
+</p>
+<h1>Custom pipes</h1>
+<p>
+  {{ 'hola jeje' | truncate:1}}
+</p>
+<p>
+  {{ 'hola jeje que tal estas' | truncate:3:'words'}}
+</p>
+<p>
+  <ion-button (click)="presentToast()">Toast</ion-button>
+</p>
+<br>
+<h1>i18n -> Internacionalizacion </h1>
+<p>
+  {{ 'title' | translate }}
+</p>
+<p>
+  <!-- Se le pasa a la directiva una cadena y ya lo busca y traduce-->
+  <span translate>hello</span><br>
+  <span translate="hello"></span>
+</p>
+<p>
+  <span> {{ 'helloName' | translate:{name:'world'} }}</span>
+</p>
+<p>
+  <span translate [translateParams]="{name:'world'}">helloName</span>
+</p>
+<p>
+  <ion-button (click)="presentToastSayHello()">Say hello</ion-button>
+</p>
+</ion-content>
