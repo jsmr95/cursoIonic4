@@ -1,14 +1,19 @@
 <ion-header>
   <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>Fruits List</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
   <div>
+    <app-loading-feedback [state]="state" (retryPressed)="retry()">
   <app-expandable-content *ngFor="let fruit of fruits;let i = index"
-  [title]="fruit.name" >
+  [title]="fruit.name" [hidden]="!state.loaded">
    <app-fruit-card [fruit]="fruit" [i]="i"></app-fruit-card>
 </app-expandable-content>
+</app-loading-feedback>
   </div>
 </ion-content>

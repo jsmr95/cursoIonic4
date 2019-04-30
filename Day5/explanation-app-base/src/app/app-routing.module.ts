@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   { path: 'fruitslist', loadChildren: './pages/fruitslist/fruitslist.module#FruitslistPageModule' },
   { path: 'fruitslist/:index', loadChildren: './pages/detail/detail.module#DetailPageModule' }
-  
+
 ];
 
 @NgModule({

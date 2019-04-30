@@ -4,14 +4,14 @@
       "id": 1,
       "name": "Apple",
       "image": "apple.png",
-      "description": "Hola no veas! que pasada!",
+      "description": "Hola no veas! que pasad",
       "link": "https://www.wikipedia.org/wiki/Apple"
     },
     {
       "id": 2,
       "name": "Orange",
       "image": "orange.png",
-      "description": "A rounded, reddish yellow, bitter or sweet citrus fruit that can be eaten.",
+      "description": "A rounded, reddish yellow, bitter or sweet citrus fruit that can be eaten.ñawfadf",
       "link": "https://www.wikipedia.org/wiki/Orange_(fruit)"
     },
     {

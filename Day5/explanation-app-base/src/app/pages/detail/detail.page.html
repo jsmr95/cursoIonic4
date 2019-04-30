@@ -1,14 +1,15 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-button slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-button>
-    <ion-title> {{fruit.name}} </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="fruitslist"></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="state.loaded"> {{ fruit.name }} </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-grid>
+  <app-loading-feedback [state]="state" (retryPressed)="retry()">
+  <ion-grid *ngIf="state.loaded">
     <ion-row>
       <ion-col size="3">
         <img src="assets/public/{{fruit.image}}" alt="">
@@ -16,8 +17,16 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <p>{{fruit.description}}</p>
+        <form [formGroup]="form" (submit)="submitForm()" >
+          <ion-item>
+            <ion-textarea formControlName="description" [value]="fruit.description"></ion-textarea>
+          </ion-item>
+          <div margin text-right>
+            <ion-button type="submit">Submit</ion-button>
+          </div>
+        </form>
       </ion-col>
     </ion-row>
   </ion-grid>
+  </app-loading-feedback>
 </ion-content>
