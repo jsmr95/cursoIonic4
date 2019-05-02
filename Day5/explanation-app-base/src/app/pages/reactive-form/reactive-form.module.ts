@@ -7,6 +7,7 @@ import { ComponentsModule } from '../../components/components.module';
 import { IonicModule } from '@ionic/angular';
 
 import { ReactiveFormPage } from './reactive-form.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    TranslateModule,
     ComponentsModule,
     ReactiveFormsModule,
     RouterModule.forChild(routes)

@@ -12,7 +12,6 @@ export class AppComponent implements OnInit{
   }
 
   public ngOnInit(): void {
-
     this.translate.use('en');
   }
 

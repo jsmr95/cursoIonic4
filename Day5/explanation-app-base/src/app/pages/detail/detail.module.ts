@@ -8,6 +8,8 @@ import { IonicModule } from '@ionic/angular';
 import { ComponentsModule } from '../../components/components.module';
 
 import { DetailPage } from './detail.page';
+import { TranslateModule } from '@ngx-translate/core';
+
 
 const routes: Routes = [
   {
@@ -23,6 +25,7 @@ const routes: Routes = [
     IonicModule,
     ComponentsModule,
     ReactiveFormsModule,
+    TranslateModule,
     RouterModule.forChild(routes)
   ],
   declarations: [DetailPage]
