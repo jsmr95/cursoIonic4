@@ -1,0 +1,12 @@
+{
+  "brands": [
+    {"name": "adidas", "isSoldBuyUs": true},
+    {"name": "reebook", "isSoldBuyUs": false},
+    {"name": "puma", "isSoldBuyUs": false}
+  ],
+  "posts": [
+    {"id": 1,"mensaje": "Me gusta adidas"},
+    {"id": 2,"mensaje": "Me gusta mucho reebook"},
+    {"id": 3,"mensaje": "puma son mis favoritas!"}
+  ]
+}
