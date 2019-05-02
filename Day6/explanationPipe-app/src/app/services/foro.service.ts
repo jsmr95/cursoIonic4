@@ -10,13 +10,7 @@ let { map, flatMap, zip } = require('rxjs/operators');
 export class ForoService {
 
   constructor() {
-    console.log(data)
-
-
-
-
-
-
+    console.log(data);
  }
 
  public getBrandsFromServer() {
@@ -39,6 +33,7 @@ export class ForoService {
    }), map((brandsAndPosts) => {
      const [brands, posts] = brandsAndPosts;
      posts.map((post) => {
+       
        //en cada mensaje, checkeo si tiene alguna de sus marcas en el mensaje
        for(let i = 0; i < brands.length; i++){
          //si lo incluye, realizo los cambios
