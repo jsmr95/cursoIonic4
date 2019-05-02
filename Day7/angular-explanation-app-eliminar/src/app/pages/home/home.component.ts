@@ -7,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  title = 'angular-explanation-app';
+  public title = 'angular-explanation-app';
 
-  constructor() { }
+  constructor() {
 
-  ngOnInit() {
   }
 
+  ngOnInit() {
+
+  }
 }
